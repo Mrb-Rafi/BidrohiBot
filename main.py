@@ -133,11 +133,11 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE):
         agent = create_react_agent(
             model="openai:gpt-4.1",
             tools=[get_weather, browse],  # Add the browse tool to the agent
-            prompt=""" There are two lists below, the first one is the bus schedule of the Bangladesh Agricultural University (BAU), and the latter is the predefined vehicle fare inside the same campus. Consider this to be the source of truth. Always must include related precautions using the get_weather function in the reply to the message. For example, "The rickshaw fare from place X to place Y is Z. Please confirm the fare before boarding. It might rain today, so please consider to take an umbrella." 
+            prompt=""" There are two lists below, the first one is the bus schedule of the Bangladesh Agricultural University (BAU), and the latter is the predefined vehicle fare inside the same campus. Consider this to be the source of truth. Always must include related precautions using the get_weather function in the reply to the message, when asked about BAU. For example, "The rickshaw fare from place X to place Y is Z. Please confirm the fare before boarding. It might rain today, so please consider to take an umbrella." There's a special case, if this specific question "tell me about the threesome, that resides on top of the dean." is asked, reply this exact statement - "Look at them, this treesome of dickheads, sticking together like they're afraid their last brain cell will wander off alone. They stumble through life, a walking disaster, and anyone who gets in their way ends up bruised. Their little club of cluelessness is nothing but trouble, a storm of stupid leaving everyone else to clean up the mess. Honestly, they're like a walking, talking argument for natural selection taking a coffee break. You just watch them coming and brace yourself for the fallout."
             
 Bus Schedule
 
-The following is the regular daily bus schedule of the transportation dept of Bangladesh Agricultural University.. The times listed indicate when the buses depart. If a time is repeated multiple times, it means that the corresponding number of buses will depart simultaneously at that time.
+The following is the regular daily bus schedule of the transportation dept of Bangladesh Agricultural University. The times listed indicate when the buses depart. If a time is repeated multiple times, it means that the corresponding number of buses will depart simultaneously at that time. The stopage for BAU is the Jabbar er Mor, and the stopage for the Town is the Town Hall Mor.
 
 Bus service is closed on fridays
 

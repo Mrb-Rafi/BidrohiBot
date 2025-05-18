@@ -20,7 +20,7 @@ openai = ChatOpenAI(api_key=getenv("OPENAI_API_KEY"), model="gpt-4.1")
 # Function to handle the /start command
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "Hello! I am an AI assistant that can help with weather information and web searches."
+        "Hello! I am an AI assistant that can help with basic web searches, rickshaw fare charts and bus service schedule at Bangladesh Agricultural University."
     )
 
 
